@@ -112,6 +112,20 @@
       "owner_name": "John Doe",
       "status": "Not Accepted",
       "id": 11
+    },
+    {
+      "owner_name": "Allan Doe",
+      "status": "Not Accepted",
+      "problem": "heating",
+      "brand": "asua",
+      "id": 12
+    },
+    {
+      "owner_name": "Allan Doe",
+      "status": "Not Accepted",
+      "problem": "battery issues",
+      "brand": "asua",
+      "id": 13
     }
   ]
 }

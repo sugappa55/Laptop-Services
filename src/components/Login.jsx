@@ -15,9 +15,10 @@ export const Login = () => {
   const handleSubmit=(e)=>{
     e.preventDefault();
     axios.get(`http://localhost:8080/users?username=${details.username}&pass=${details.password}`).then(({data})=>{
-      dispatch(login(data[0].role))
-      data[0].role=="admin"?navigate("/orders"):navigate("/neworders")
-    console.log(data[0])})
+      dispatch(login(data[0]))
+      data[0].role=="admin"?navigate("/orders"):navigate("/neworder")
+   // console.log(data[0])
+  })
   }
   return (
     <div>

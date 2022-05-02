@@ -1,6 +1,19 @@
+
+import axios from "axios"
+import { useEffect, useState } from "react";
+
 export const Orders = () => {
   //  Get all data when admin logs in and populate it
   // store it in redux
+  const [data,setData]=useState([])
+  useEffect(()=>{
+    getData()
+  },[])
+  
+
+  const getData=()=>{
+      axios.get("http://localhost:8080/orders").then(({data})=>setData(data))
+  }
 
   return (
     <div>
