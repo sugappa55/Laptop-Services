@@ -3,8 +3,9 @@ import { Login } from "./components/Login";
 import { Logout } from "./components/Logout";
 import { NewOrder } from "./components/NewOrder";
 import { Orders } from "./components/Orders";
-import { ProtectedRoute } from "./components/ProtextedRoute";
-
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import {Link} from "react-router-dom"
+import {Route,Routes} from "react-router-dom"
 function App() {
   return (
     <div className="App">
@@ -29,7 +30,13 @@ function App() {
         /logout     Logout
         /orders     Orders    Protected
         /neworder   NewOrder  Protected
-        */}
+        */
+      }
+      <Route path="/" elemenet={<Home/>}/>
+      <Route path="/login" elemenet={<Login/>}/>
+      <Route path="/logot" elemenet={<Logout/>}/>
+      <Route path="/orders" elemenet={<ProtectedRoute><Orders/></ProtectedRoute>}/>
+      <Route path="/neworder" element={<ProtectedRoute><NewOrder/></ProtectedRoute>}/>    
       </Routes>
     </div>
   );

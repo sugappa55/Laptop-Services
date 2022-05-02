@@ -1,8 +1,11 @@
-const init = {};
+import { Login, Logout } from "./actions";
 
-export const reducer = (store = init, { type, payload }) => {
+const init = {isLoggedIn:false};
+
+export const reducer = (store = init, { type}) => {
   switch (type) {
-    default:
-      return store;
+    case Login:return {...store,isLoggedIn:true}
+    case Logout:return {...store,isLoggedIn:false}
+    default: return store;
   }
 };
